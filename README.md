@@ -20,4 +20,5 @@ Asp.Net Core MVC 5.0 kullanılarak geliştirilen bu uygulama, Entity Framework D
  - PartialView Kullanımı
 
 
+
   
