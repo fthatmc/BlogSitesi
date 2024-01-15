@@ -1,0 +1,25 @@
+﻿@model BlogSitesi.Model.Entity.TblTestimonial
+
+@{
+    ViewBag.Title = "AddTestimonil";
+    Layout = "~/Views/Shared/View.cshtml";
+}
+
+<h2>Görüş Ekleme Sayfası</h2>
+
+<form method="post">
+
+    @Html.Label("Ad Soyad")
+    @Html.TextBoxFor(x => x.NameSurname, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.NameSurname, "", new { @style = "color:red" })
+    <br />
+    @Html.Label("Resim Url")
+    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.ImageUrl, "", new { @style = "color:red" })
+    <br />
+    @Html.Label("Açıklama")
+    @Html.TextAreaFor(x => x.Description, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Description, "", new { @style = "color:red" })
+    <br />
+    <button class="btn btn-success">Kaydet</button>
+</form>

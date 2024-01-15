@@ -1,0 +1,30 @@
+﻿@using BlogSitesi.Model.Entity
+@model List<TblTestimonial>
+
+
+<div class="container text-center">
+    <p class="section-subtitle">Müşteri Yorumları</p>
+    <h6 class="section-title mb-6">Görüşler</h6>
+
+    <!-- row -->
+    <div class="row">
+        @foreach (var x in Model)
+        {
+            <div class="col-md-6">
+                <div class="testimonial-card">
+                    <div class="testimonial-card-img-holder">
+                        <img src="@x.ImageUrl" class="testimonial-card-img"
+                             alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+                    </div>
+                    <div class="testimonial-card-body">
+                        <p class="testimonial-card-subtitle">
+                            @x.Description
+                        </p>
+                        <h6 class="testimonial-card-title">@x.NameSurname</h6>
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+</div> 

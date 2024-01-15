@@ -1,0 +1,47 @@
+﻿
+@using BlogSitesi.Model.Entity
+@model List<TblAbout>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/View.cshtml";
+}
+
+
+<br />
+<h2>Hakkımda Sayfası</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Sıra No</th>
+        <th>Başlık1</th>
+        <th>Başlık2</th>
+        <th>Açıklama</th>
+        <th>ResimURL</th>
+        <th>İşlem</th>
+
+    </tr>
+    
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.AboutID</td>
+            <td>@x.Header</td>
+            <td>@x.Title</td>
+            <td>@x.Description</td>
+            <td>@x.ImageUrl</td>
+
+            <td>
+                <a style="width:100px;" class="btn btn-info btn-sm" href="/About/EditAbout/@x.AboutID">
+                    <i class="fas fa-pencil-alt">
+                    </i>
+                    Düzenle
+                </a>
+               
+            </td>
+        </tr>
+    }
+</table>
+
+
+

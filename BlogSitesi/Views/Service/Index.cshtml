@@ -1,0 +1,52 @@
+﻿@using BlogSitesi.Model.Entity
+@model List<TblService>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/View.cshtml";
+}
+
+
+<br />
+<h2>Servis Sayfası</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Sıra No</th>
+        <th>Başlık</th>
+        <th>Açıklama</th>
+        <th>ResimURL</th>
+        <th>İşlem</th>
+
+    </tr>
+    @{int sirano = 0;}
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@{sirano++;} @sirano</td>
+            <td>@x.Header</td>
+            <td>@x.Description</td>
+            <td>@x.ImageUrl</td>
+
+            <td>
+                <a style="width:100px;" class="btn btn-info btn-sm" href="/Service/EditService/@x.ServiceID">
+                    <i class="fas fa-pencil-alt">
+                    </i>
+                    Düzenle
+                </a>
+                <a class="btn btn-danger btn-sm" href="/Service/DeleteService/@x.ServiceID">
+                    <i class="fas fa-trash">
+                    </i>
+                    Sil
+                </a>
+
+            </td>
+        </tr>
+    }
+</table>
+
+<a href="/Service/AddService/" class="btn btn-primary">Yeni Servis Ekle</a>
+
+
+
+

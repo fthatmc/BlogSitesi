@@ -1,0 +1,24 @@
+﻿@using BlogSitesi.Model.Entity
+@model List<TblAbout>
+
+
+<div class="container text-center">
+    @foreach (var x in Model)
+    {
+        <div class="about">
+            <div class="about-img-holder">
+                <img src="@x.ImageUrl" class="about-img"
+                     alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+            </div>
+            <div class="about-caption">
+                <p class="section-subtitle">@x.Header</p>
+                <h2 class="section-title mb-3">@x.Title</h2>
+                <p>
+                    @x.Description
+                </p>
+                <button class="btn-rounded btn btn-outline-primary mt-4">CV İndir</button>
+            </div>
+        </div>
+    }
+
+</div>

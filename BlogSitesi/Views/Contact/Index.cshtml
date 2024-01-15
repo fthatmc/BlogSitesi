@@ -1,0 +1,56 @@
+﻿@using BlogSitesi.Model.Entity
+@model List<TblContact>
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/View.cshtml";
+}
+
+
+
+
+
+<br />
+<h2>İletişim Sayfası</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Sıra No</th>
+        <th>Ad Soyad</th>
+        <th>Mail</th>
+        <th>Mesaj</th>
+        <th>Tarih</th>
+        <th>Okundu</th>
+        <th>Kategori</th>
+        <th>İşlem</th>
+
+    </tr>
+    @{int sirano = 0;}
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@{sirano++;} @sirano</td>
+            <td>@x.NameSurnama</td>
+            <td>@x.Mail</td>
+            <td>@x.Messege</td>
+            <td>@x.SendDate</td>
+            <td>Okunmadı</td>            
+            <td>@x.TblCategory.CategoryName</td>
+
+            <td>
+                <a style="width:100px;" class="btn btn-danger btn-sm" href="/Contact/DeleteContact/@x.ContactID">
+                    <i class="fas fa-trash">
+                    </i>
+                    Sil
+                </a>
+
+            </td>
+        </tr>
+    }
+</table>
+
+
+
+
+

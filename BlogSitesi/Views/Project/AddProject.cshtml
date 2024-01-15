@@ -1,0 +1,23 @@
+﻿@model BlogSitesi.Model.Entity.TblProject
+@{
+    ViewBag.Title = "AddProject";
+    Layout = "~/Views/Shared/View.cshtml";
+}
+
+
+<h3>Yeni Proje Ekleleme Sayfası</h3>
+<br />
+<form method="post">
+    <input class="form-control" type="text" name="Title" placeholder="Başlığı Buraya Yazınız" />
+    <br />
+    <input class="form-control" type="text" name="ImageUrl" placeholder="Resim Url Giriniz" />
+    <br />
+    <input class="form-control" type="text" name="ProjectUrl" placeholder="Proje Url Giriniz" />
+    <br />
+    <textarea class="form-control" type="text" name="Description" placeholder="Açıklamanız" rows="5"></textarea>
+    <br />
+    <button class="btn btn-success">Kaydet</button>
+</form>
+
+
+

@@ -1,0 +1,67 @@
+﻿@using BlogSitesi.Model.Entity
+@model List<TblTestimonial>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/View.cshtml";
+}
+
+
+<br />
+<h2>Görüşler Sayfası</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Sıra No</th>
+        <th>Ad Soyad</th>
+        <th>ResimURL</th>
+        <th>Açıklama</th>
+        <th>Durum</th>
+        <th>İşlem</th>
+
+    </tr>
+    @{int sirano = 0;}
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@{sirano++;} @sirano</td>
+            <td>@x.NameSurname</td>
+            <td>@x.ImageUrl</td>
+            <td>@x.Description</td>
+            
+                @if (x.Status == true)
+                {
+                <td><a href="/Testimonial/ChangesStatusToFalse/@x.TestimonialID" class="btn btn-outline-info">Pasif Yap</a></td>
+                }
+                else
+                 {
+                <td><a href="/Testimonial/ChangesStatusToTrue/@x.TestimonialID" class="btn btn-outline-success">Aktif Yap</a></td>
+                }
+           
+
+                <td>
+                    <a style="width:100px;" class="btn btn-info btn-sm" href="/Testimonial/EditTestimonil/@x.TestimonialID">
+                        <i class="fas fa-pencil-alt">
+                        </i>
+                        Düzenle
+                    </a>
+                    <a class="btn btn-danger btn-sm" href="/Testimonial/DeleteTestimonil/@x.TestimonialID">
+                        <i class="fas fa-trash">
+                        </i>
+                        Sil
+                    </a>
+
+                </td>
+            </tr>
+    }
+</table>
+
+<a href="/Testimonial/AddTestimonil/" class="btn btn-primary">Yeni Görüş Ekle</a>
+
+
+
+
+
+
+
+

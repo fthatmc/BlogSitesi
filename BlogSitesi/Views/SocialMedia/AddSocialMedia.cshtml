@@ -1,0 +1,19 @@
+﻿@model BlogSitesi.Model.Entity.TblSocialMedia
+@{
+    ViewBag.Title = "AddSocialMedia";
+    Layout = "~/Views/Shared/View.cshtml";
+}
+
+
+<h3>Yeni Servis Ekleleme Sayfası</h3>
+<br />
+<form method="post">
+    <input class="form-control" type="text" name="Title" placeholder="Başlığı Buraya Yazınız" />
+    <br />
+    <input class="form-control" type="text" name="SocialMediaUrl" placeholder="Url Giriniz" />
+    <br />
+    <input class="form-control" type="text" name="Icon" placeholder="İcon" />
+    <br />
+    <button class="btn btn-success">Kaydet</button>
+</form>
+

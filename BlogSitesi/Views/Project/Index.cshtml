@@ -1,0 +1,55 @@
+﻿@using BlogSitesi.Model.Entity
+@model List<TblProject>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/View.cshtml";
+}
+
+<br />
+<h2>Servis Sayfası</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Sıra No</th>
+        <th>Başlık</th>
+        <th>Açıklama</th>
+        <th>ResimURL</th>
+        <th>ProjeURL</th>
+        <th>İşlem</th>
+
+    </tr>
+    @{int sirano = 0;}
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@{sirano++;} @sirano</td>
+            <td>@x.Title</td>
+            <td>@x.Description</td>
+            <td>@x.ImageUrl</td>
+            <td>@x.ProjectUrl</td>
+
+            <td>
+                <a style="width:100px;" class="btn btn-info btn-sm" href="/Project/EditProject/@x.ProjectID">
+                    <i class="fas fa-pencil-alt">
+                    </i>
+                    Düzenle
+                </a>
+                <a class="btn btn-danger btn-sm" href="/Project/DeleteProject/@x.ProjectID">
+                    <i class="fas fa-trash">
+                    </i>
+                    Sil
+                </a>
+
+            </td>
+        </tr>
+    }
+</table>
+
+<a href="/Project/AddProject/" class="btn btn-primary">Yeni Proje Ekle</a>
+
+
+
+
+
+

@@ -1,0 +1,29 @@
+﻿@model BlogSitesi.Model.Entity.TblSocialMedia
+
+@{
+    ViewBag.Title = "EditSocialMedia";
+    Layout = "~/Views/Shared/View.cshtml";
+}
+
+
+<h3>Servis Güncelleme Sayfası</h3>
+<br />
+<form method="post">
+
+    @Html.HiddenFor(x => x.SocialMediaID, new { @class = "form-control" })
+    <br />
+    @Html.Label("Başlık")
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    @Html.Label("URL")
+    @Html.TextBoxFor(x => x.SocialMediaUrl, new { @class = "form-control" })
+    <br />
+    @Html.Label("İcon")
+    @Html.TextBoxFor(x => x.Icon, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-success">Güncelle</button>
+</form>
+
+
+

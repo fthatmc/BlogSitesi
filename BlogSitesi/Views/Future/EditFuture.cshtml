@@ -1,0 +1,27 @@
+﻿@model BlogSitesi.Model.Entity.TblFuture
+
+@{
+    ViewBag.Title = "EditFuture";
+    Layout = "~/Views/Shared/View.cshtml";
+}
+
+
+<h3>Ana Sayfa Başlık Güncelleme Sayfası</h3>
+<br />
+<form method="post">
+
+    @Html.HiddenFor(x => x.FutureID, new { @class = "form-control" })
+    <br />
+    @Html.Label("Başlık")
+    @Html.TextBoxFor(x => x.Header, new { @class = "form-control" })
+    <br />
+    @Html.Label("Ad Soyad")
+    @Html.TextBoxFor(x => x.NameSurname, new { @class = "form-control" })
+    <br />
+    @Html.Label("Alt Başlık")
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+
+
+    <button class="btn btn-success">Güncelle</button>
+</form>

@@ -1,0 +1,31 @@
+﻿@model BlogSitesi.Model.Entity.TblAbout
+
+
+@{
+    ViewBag.Title = "EditAbout";
+    Layout = "~/Views/Shared/View.cshtml";
+}
+
+
+<h3>Hakkımda Güncelleme Sayfası</h3>
+<br />
+<form method="post">
+
+    @Html.HiddenFor(x => x.AboutID, new { @class = "form-control" })
+    <br />
+    @Html.Label("Başlık")
+    @Html.TextBoxFor(x => x.Header, new { @class = "form-control" })
+    <br />
+    @Html.Label("Alt Başlık")
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    @Html.Label("Açıklama")
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+    <br />
+    @Html.Label("Resim URL")
+    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-success">Güncelle</button>
+</form>
+

@@ -1,0 +1,25 @@
+﻿@using BlogSitesi.Model.Entity
+@model List<TblContact>
+
+<div class="container text-center">
+    <p class="section-subtitle">Sana Nasıl Ulaşabilirim?</p>
+    <h6 class="section-title mb-5">Benimle İletişime Geç</h6>
+    <!-- contact form -->
+    <form method="post" class="contact-form col-md-10 col-lg-8 m-auto">
+        <div class="form-row">
+            <div class="form-group col-sm-6">
+                <input name="NameSurnama" type="text" size="50" class="form-control" placeholder="Ad Soyad" required>
+            </div>
+            <div class="form-group col-sm-6">
+                <input name="Mail" type="email" class="form-control" placeholder="Mail Adresiniz" requried>
+            </div>
+            <div class="form-group col-sm-12">
+                <textarea name="Messege" id="comment" rows="6" class="form-control"
+                          placeholder="Birşeyler Yaz"></textarea>
+            </div>
+            <div class="form-group col-sm-12 mt-3">
+                <button class="btn btn-outline-primary rounded">Mesaj Gönder</button>
+            </div>
+        </div>
+    </form><!-- end of contact form -->
+</div>

@@ -1,0 +1,20 @@
+﻿@model BlogSitesi.Model.Entity.TblService
+
+@{
+    ViewBag.Title = "AddService";
+    Layout = "~/Views/Shared/View.cshtml";
+}
+
+
+<h3>Yeni Servis Ekleleme Sayfası</h3>
+<br />
+<form method="post">
+    <input class="form-control" type="text" name="Header" placeholder="Başlığı Buraya Yazınız" />
+    <br />
+    <input class="form-control" type="text" name="ImageUrl" placeholder="Resim Url Giriniz" />
+    <br />
+    <textarea class="form-control" type="text" name="Description" placeholder="Açıklamanız" rows="5"></textarea>
+    <br />
+    <button class="btn btn-success">Kaydet</button>
+</form>
+

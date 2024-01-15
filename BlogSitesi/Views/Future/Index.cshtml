@@ -1,0 +1,41 @@
+﻿@using BlogSitesi.Model.Entity
+@model List<TblFuture>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/View.cshtml";
+}
+
+
+<br />
+<h2>Ana Sayfa</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Sıra No</th>
+        <th>Başlık1</th>
+        <th>Ad Soyad</th>
+        <th>Başlık2</th>
+        <th>Düzenle</th>
+
+    </tr>
+    @{int sirano = 0;}
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@{sirano++;} @sirano</td>
+            <td>@x.Header</td>
+            <td>@x.NameSurname</td>
+            <td>@x.Title</td>
+           
+            <td>
+                <a class="btn btn-info btn-sm" href="/Future/EditFuture/@x.FutureID">
+                    <i class="fas fa-pencil-alt">
+                    </i>
+                    Düzenle
+                </a>
+            </td>
+        </tr>
+    }
+</table>
+

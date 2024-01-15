@@ -1,0 +1,28 @@
+﻿@model BlogSitesi.Model.Entity.TblService
+
+@{
+    ViewBag.Title = "EditService";
+    Layout = "~/Views/Shared/View.cshtml";
+}
+
+
+<h3>Servis Güncelleme Sayfası</h3>
+<br />
+<form method="post">
+
+    @Html.HiddenFor(x => x.ServiceID, new { @class = "form-control" })
+    <br />
+    @Html.Label("Başlık")
+    @Html.TextBoxFor(x => x.Header, new { @class = "form-control" })
+    <br />
+    @Html.Label("Resim URL")
+    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+    <br />
+    @Html.Label("Açıklama")
+    @Html.TextAreaFor(x => x.Description, new { @class = "form-control"})
+    <br />
+    <button class="btn btn-success">Güncelle</button>
+</form>
+
+
+
