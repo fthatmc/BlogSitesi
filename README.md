@@ -19,4 +19,5 @@ Asp.Net Core MVC 5.0 kullanılarak geliştirilen bu uygulama, Entity Framework D
  - Durumu Aktif-Pasif Yapma
  - PartialView Kullanımı
 
+
   
