@@ -20,5 +20,19 @@ Asp.Net Core MVC 5.0 kullanılarak geliştirilen bu uygulama, Entity Framework D
  - PartialView Kullanımı
 
 
+![Ekran görüntüsü 2024-01-15 173747](https://github.com/fthatmc/BlogSitesi/assets/136472585/452a1e0d-acff-452e-8d74-9ff1f5b89281)
+
+
+![Ekran görüntüsü 2024-01-15 173833](https://github.com/fthatmc/BlogSitesi/assets/136472585/fc1f6350-1153-4526-bdbd-623621eb04a7)
+
+
+![Ekran görüntüsü 2024-01-15 173312](https://github.com/fthatmc/BlogSitesi/assets/136472585/ed27fac6-6865-493c-b55d-e9987dc2c2ea)
+
+
+![Ekran görüntüsü 2024-01-15 173418](https://github.com/fthatmc/BlogSitesi/assets/136472585/bc3ffffd-24de-4466-b459-e73766cd96ff)
+
+
+![Ekran görüntüsü 2024-01-15 173530](https://github.com/fthatmc/BlogSitesi/assets/136472585/3c2d0afe-c843-44ca-88a7-ea52d111b08c)
+
 
   
