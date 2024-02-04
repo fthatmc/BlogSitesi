@@ -1,9 +1,15 @@
 ﻿using BlogSitesi.Model.Entity;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 using System;
 using System.Collections.Generic;
+using System.Drawing.Printing;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Services.Description;
+using System.Xml.Linq;
 
 namespace BlogSitesi.Controllers
 {
@@ -18,7 +24,7 @@ namespace BlogSitesi.Controllers
             var value = db.TblFuture.ToList();
             return View(value);
         }
-
+		
         public PartialViewResult About()
         {
             var value = db.TblAbout.ToList();
@@ -59,9 +65,12 @@ namespace BlogSitesi.Controllers
         public PartialViewResult Contact(TblContact t)
         {
             t.SendDate = DateTime.Parse(DateTime.Now.ToShortDateString());
+            t.IsRead = true;
             db.TblContact.Add(t);
             db.SaveChanges();
             return PartialView();
         }
-    }
+
+		
+	}
 }
